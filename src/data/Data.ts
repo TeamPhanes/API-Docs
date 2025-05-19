@@ -532,7 +532,7 @@ export const DataType: DataTypeDTO = {
           },
         },
       ],
-    }
+    },
   },
   Gathering: {
     GET: {
