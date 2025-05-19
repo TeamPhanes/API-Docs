@@ -666,16 +666,9 @@ export const DataType: DataTypeDTO = {
           },
         },
         {
-          label: 'Request Body',
+          label: 'Parameters',
           content: {
-            name: 'string',
-            themeId: 'number',
-            content: 'string',
-            price: 'string',
-            dateTime: 'string',
-            registrationStart: 'string',
-            registrationEnd: 'string',
-            capacity: 'number',
+            gatheringId: 'number',
           },
         },
       ],
