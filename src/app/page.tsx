@@ -80,6 +80,7 @@ export default function Home() {
                         return (
                           <>
                             <button
+                              type="button"
                               className="bg-bgCard m-2 rounded-md border-border border-[1px] relative"
                               onClick={() => openModal(pathKey)}
                             >

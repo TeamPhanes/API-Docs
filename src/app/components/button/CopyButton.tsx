@@ -24,6 +24,7 @@ export default function CopyButton({ textToCopy }: CopyButtonProps) {
 
   return (
     <button
+      type="button"
       onClick={handleCopy}
       className="mr-3 xl:mr-5 text-sm hover:text-gray-700 flex items-center gap-1"
     >
