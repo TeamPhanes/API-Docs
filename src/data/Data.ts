@@ -603,7 +603,6 @@ export const DataType: DataTypeDTO = {
             detailImage: 'string',
             price: 'number',
             content: 'string',
-            leader: 'string',
           },
         },
       ],
