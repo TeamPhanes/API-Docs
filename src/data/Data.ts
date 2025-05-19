@@ -621,7 +621,7 @@ export const DataType: DataTypeDTO = {
           label: 'Request Body',
           content: {
             name: 'string',
-            roomEscapeId: 'number',
+            themeId: 'number',
             content: 'string',
             price: 'string',
             dateTime: 'string',
@@ -645,7 +645,7 @@ export const DataType: DataTypeDTO = {
           label: 'Request Body',
           content: {
             name: 'string',
-            roomEscapeId: 'number',
+            themeId: 'number',
             content: 'string',
             price: 'string',
             dateTime: 'string',
@@ -669,7 +669,7 @@ export const DataType: DataTypeDTO = {
           label: 'Request Body',
           content: {
             name: 'string',
-            roomEscapeId: 'number',
+            themeId: 'number',
             content: 'string',
             price: 'string',
             dateTime: 'string',
