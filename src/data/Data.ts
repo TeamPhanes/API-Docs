@@ -564,6 +564,7 @@ export const DataType: DataTypeDTO = {
               listImage: 'string',
               genres: 'string[]',
               playtime: 'number',
+              themeId: 'number',
               cafe: 'string',
               spot: 'string',
               dateTime: 'string',
