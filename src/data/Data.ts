@@ -386,29 +386,6 @@ export const DataType: DataTypeDTO = {
           },
         },
       ],
-      '/user/me/theme\n내가 참여한 방탈출 리뷰수정': [
-        {
-          label: 'Headers',
-          content: {
-            ContentType: 'multipart/form-data',
-            Authorization: 'Bearer {accessToken}',
-          },
-        },
-        {
-          label: 'Request Body',
-          content: {
-            image: 'file',
-            numberOfPlayer: 'number',
-            success: 'boolean',
-            hint: 'number',
-            myRating: 'number',
-            themeReview: 'string',
-            levelReview: 'string',
-            storyReview: 'string',
-            reviewComment: 'string',
-          },
-        },
-      ],
     },
   },
   Theme: {
@@ -527,6 +504,31 @@ export const DataType: DataTypeDTO = {
             scoreCount: 'number',
             averageScore: 'number',
             score: 'number[]',
+          },
+        },
+      ],
+    },
+    PATCH: {
+      '/review\n내가 참여한 방탈출 리뷰수정': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'multipart/form-data',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+        {
+          label: 'Request Body',
+          content: {
+            image: 'file',
+            numberOfPlayer: 'number',
+            success: 'boolean',
+            hint: 'number',
+            myRating: 'number',
+            themeReview: 'string',
+            levelReview: 'string',
+            storyReview: 'string',
+            reviewComment: 'string',
           },
         },
       ],
