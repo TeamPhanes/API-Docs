@@ -168,7 +168,6 @@ export const DataType: DataTypeDTO = {
           content: {
             totalCount: 'number',
             currentPage: 'number',
-            hasMore: 'boolean',
             data: [
               {
                 themeId: 'number',
@@ -217,7 +216,6 @@ export const DataType: DataTypeDTO = {
           content: {
             totalCount: 'number',
             currentPage: 'number',
-            hasMore: 'boolean',
             data: [
               {
                 themeId: 'number',
@@ -257,7 +255,6 @@ export const DataType: DataTypeDTO = {
           content: {
             totalCount: 'number',
             currentPage: 'number',
-            hasMore: 'boolean',
             data: [
               {
                 userId: 'number',
@@ -307,7 +304,6 @@ export const DataType: DataTypeDTO = {
           content: {
             totalCount: 'number',
             currentPage: 'number',
-            hasMore: 'boolean',
             data: [
               {
                 gatheringId: 'number',
@@ -351,7 +347,6 @@ export const DataType: DataTypeDTO = {
           content: {
             totalCount: 'number',
             currentPage: 'number',
-            hasMore: 'boolean',
             date: [
               {
                 gatheringId: 'number',
@@ -437,7 +432,6 @@ export const DataType: DataTypeDTO = {
           content: {
             totalCount: 'number',
             currentPage: 'number',
-            hasMore: 'boolean',
             data: [
               {
                 themeId: 'number',
@@ -501,7 +495,6 @@ export const DataType: DataTypeDTO = {
           content: {
             totalCount: 'number',
             currentPage: 'number',
-            hasMore: 'boolean',
             data: [
               {
                 user: {
@@ -595,7 +588,6 @@ export const DataType: DataTypeDTO = {
           content: {
             totalCount: 'number',
             currentPage: 'number',
-            hasMore: 'boolean',
             data: [
               {
                 gatheringId: 'number',
@@ -794,7 +786,6 @@ export const DataType: DataTypeDTO = {
           content: {
             totalCount: 'number',
             currentPage: 'number',
-            hasMore: 'boolean',
             data: [
               {
                 commentId: 'number',
