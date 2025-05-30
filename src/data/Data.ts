@@ -473,6 +473,40 @@ export const DataType: DataTypeDTO = {
         },
       ],
     },
+    POST: {
+      '/theme/{themeId}/like\n방탈출 찜': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+        {
+          label: 'Parameters',
+          content: {
+            themeId: 'number',
+          },
+        },
+      ],
+    },
+    DELETE: {
+      '/theme/{themeId}/like\n방탈출 찜 삭제': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+        {
+          label: 'Parameters',
+          content: {
+            themeId: 'number',
+          },
+        },
+      ],
+    },
   },
   Review: {
     GET: {
@@ -658,6 +692,21 @@ export const DataType: DataTypeDTO = {
           },
         },
       ],
+      '/gathering/{gatheringId}/like\n모임 찜': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+        {
+          label: 'Parameters',
+          content: {
+            gatheringId: 'number',
+          },
+        },
+      ],
     },
     PATCH: {
       '/gathering/{gatheringId}\n모임 수정': [
@@ -685,6 +734,21 @@ export const DataType: DataTypeDTO = {
     },
     DELETE: {
       '/gathering/{gatheringId}\n모임 삭제': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+        {
+          label: 'Parameters',
+          content: {
+            gatheringId: 'number',
+          },
+        },
+      ],
+      '/gathering/{gatheringId}/like\n모임 찜 삭제': [
         {
           label: 'Headers',
           content: {
