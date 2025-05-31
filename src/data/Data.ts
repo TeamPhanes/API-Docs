@@ -347,14 +347,16 @@ export const DataType: DataTypeDTO = {
           content: {
             totalCount: 'number',
             currentPage: 'number',
-            date: [
-              {
-                gatheringId: 'number',
-                gatheringName: 'string',
-                content: 'string',
-                createdAt: 'string',
-              },
-            ],
+            data: {
+              date: [
+                {
+                  gatheringId: 'number',
+                  gatheringName: 'string',
+                  content: 'string',
+                  createdAt: 'string',
+                },
+              ],
+            },
           },
         },
       ],
