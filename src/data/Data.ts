@@ -494,9 +494,39 @@ export const DataType: DataTypeDTO = {
           },
         },
       ],
+      '/theme/{themeId}/visit\n방탈출 참여': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+        {
+          label: 'Parameters',
+          content: {
+            themeId: 'number',
+          },
+        },
+      ],
     },
     DELETE: {
       '/theme/{themeId}/like\n방탈출 찜 삭제': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+        {
+          label: 'Parameters',
+          content: {
+            themeId: 'number',
+          },
+        },
+      ],
+      '/theme/{themeId}/visit\n방탈출 참여 해제': [
         {
           label: 'Headers',
           content: {
