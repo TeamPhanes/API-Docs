@@ -415,6 +415,7 @@ export const DataType: DataTypeDTO = {
           label: 'Headers',
           content: {
             ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
           },
         },
         {
@@ -447,6 +448,8 @@ export const DataType: DataTypeDTO = {
                 rating: 'number',
                 address: 'string',
                 level: 'string',
+                isLiked: 'boolean',
+                isMarked: 'boolean',
               },
             ],
           },
