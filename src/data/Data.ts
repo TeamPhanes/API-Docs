@@ -695,7 +695,10 @@ export const DataType: DataTypeDTO = {
           label: 'Responses',
           content: {
             gatheringId: 'number',
+            name: 'string',
             detailImage: 'string',
+            capacity: 'number',
+            dateTime: 'string',
             registrationStart: 'string',
             registrationEnd: 'string',
             price: 'number',
