@@ -572,7 +572,7 @@ export const DataType: DataTypeDTO = {
                   image: 'string',
                 },
                 content: 'string',
-                image: 'string',
+                image: 'string[]',
                 rating: 'number',
                 success: 'boolean',
                 themeReview: 'string',
