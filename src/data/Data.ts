@@ -191,6 +191,7 @@ export const DataType: DataTypeDTO = {
                 reviewComment: 'string',
                 success: 'boolean',
                 isLiked: 'boolean',
+                totalLikes: 'number',
               },
             ],
           },
