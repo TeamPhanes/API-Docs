@@ -655,6 +655,23 @@ export const DataType: DataTypeDTO = {
         },
       ],
     },
+    DELETE: {
+      '/review/{reviewId}\n리뷰 삭제': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+        {
+          label: 'Parameters',
+          content: {
+            themeId: 'number',
+          },
+        },
+      ],
+    },
   },
   Gathering: {
     GET: {
