@@ -982,7 +982,7 @@ export const DataType: DataTypeDTO = {
       ],
     },
     PATCH: {
-      '/comment{commentId}\n모임 댓글 수정': [
+      '/comment/{commentId}\n모임 댓글 수정': [
         {
           label: 'Headers',
           content: {
@@ -1006,7 +1006,7 @@ export const DataType: DataTypeDTO = {
       ],
     },
     DELETE: {
-      '/comment{commentId}\n모임 댓글 삭제': [
+      '/comment/{commentId}\n모임 댓글 삭제': [
         {
           label: 'Headers',
           content: {
