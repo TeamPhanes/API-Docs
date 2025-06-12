@@ -604,6 +604,32 @@ export const DataType: DataTypeDTO = {
         },
       ],
     },
+    POST: {
+      '/review\n리뷰 생성': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'multipart/form-data',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+        {
+          label: 'Request Body',
+          content: {
+            themeId: 'number',
+            content: 'string',
+            rating: 'number',
+            success: 'boolean',
+            images: 'file[]',
+            hint: 'number',
+            numberOfPlayer: 'number',
+            themeReview: 'string',
+            levelReview: 'string',
+            storyReview: 'string',
+          },
+        },
+      ],
+    },
     PATCH: {
       '/review\n내가 참여한 방탈출 리뷰수정': [
         {
