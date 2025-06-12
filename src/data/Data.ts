@@ -604,6 +604,32 @@ export const DataType: DataTypeDTO = {
         },
       ],
     },
+    POST: {
+      '/review\n리뷰 생성': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'multipart/form-data',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+        {
+          label: 'Request Body',
+          content: {
+            themeId: 'number',
+            content: 'string',
+            rating: 'number',
+            success: 'boolean',
+            images: 'file[]',
+            hint: 'number',
+            numberOfPlayer: 'number',
+            themeReview: 'string',
+            levelReview: 'string',
+            storyReview: 'string',
+          },
+        },
+      ],
+    },
     PATCH: {
       '/review\n내가 참여한 방탈출 리뷰수정': [
         {
@@ -625,6 +651,23 @@ export const DataType: DataTypeDTO = {
             levelReview: 'string',
             storyReview: 'string',
             reviewComment: 'string',
+          },
+        },
+      ],
+    },
+    DELETE: {
+      '/review/{reviewId}\n리뷰 삭제': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+        {
+          label: 'Parameters',
+          content: {
+            themeId: 'number',
           },
         },
       ],
@@ -939,7 +982,7 @@ export const DataType: DataTypeDTO = {
       ],
     },
     PATCH: {
-      '/comment{commentId}\n모임 댓글 수정': [
+      '/comment/{commentId}\n모임 댓글 수정': [
         {
           label: 'Headers',
           content: {
@@ -963,7 +1006,7 @@ export const DataType: DataTypeDTO = {
       ],
     },
     DELETE: {
-      '/comment{commentId}\n모임 댓글 삭제': [
+      '/comment/{commentId}\n모임 댓글 삭제': [
         {
           label: 'Headers',
           content: {
