@@ -631,7 +631,7 @@ export const DataType: DataTypeDTO = {
       ],
     },
     PATCH: {
-      '/review\n내가 참여한 방탈출 리뷰수정': [
+      '/review/{reviewId}\n내가 참여한 방탈출 리뷰수정': [
         {
           label: 'Headers',
           content: {
@@ -642,7 +642,8 @@ export const DataType: DataTypeDTO = {
         {
           label: 'Request Body',
           content: {
-            image: 'file',
+            content: 'string',
+            images: 'file[]',
             numberOfPlayer: 'number',
             success: 'boolean',
             hint: 'number',
@@ -650,7 +651,6 @@ export const DataType: DataTypeDTO = {
             themeReview: 'string',
             levelReview: 'string',
             storyReview: 'string',
-            reviewComment: 'string',
           },
         },
       ],
