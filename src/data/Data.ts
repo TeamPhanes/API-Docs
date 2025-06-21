@@ -478,6 +478,23 @@ export const DataType: DataTypeDTO = {
           },
         },
       ],
+      '/theme/search\n방탈출 검색': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+          },
+        },
+        {
+          label: 'Responses',
+          content: {
+            themeId: 'number',
+            themeName: 'string',
+            cafe: 'string',
+            spot: 'string',
+          },
+        },
+      ],
     },
     POST: {
       '/theme/{themeId}/like\n방탈출 찜': [
