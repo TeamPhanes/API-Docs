@@ -183,6 +183,7 @@ export const DataType: DataTypeDTO = {
                 reviewId: 'number',
                 reviewCount: 'number',
                 myRating: 'number',
+                reviewImage: 'string',
                 hint: 'number',
                 numberOfPlayer: 'number',
                 themeReview: 'string',
