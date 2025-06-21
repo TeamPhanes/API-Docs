@@ -659,7 +659,7 @@ export const DataType: DataTypeDTO = {
         {
           label: 'Headers',
           content: {
-            ContentType: 'multipart/form-data',
+            ContentType: 'application/json',
             Authorization: 'Bearer {accessToken}',
           },
         },
@@ -710,7 +710,7 @@ export const DataType: DataTypeDTO = {
         {
           label: 'Headers',
           content: {
-            ContentType: 'multipart/form-data',
+            ContentType: 'application/json',
             Authorization: 'Bearer {accessToken}',
           },
         },
