@@ -490,6 +490,7 @@ export const DataType: DataTypeDTO = {
           content: {
             keyword: 'string',
             city: 'string',
+            state: 'string',
           },
         },
         {
