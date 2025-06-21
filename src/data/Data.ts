@@ -486,6 +486,13 @@ export const DataType: DataTypeDTO = {
           },
         },
         {
+          label: 'Parameters',
+          content: {
+            keyword: 'string',
+            city: 'string',
+          },
+        },
+        {
           label: 'Responses',
           content: {
             themeId: 'number',
