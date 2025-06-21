@@ -608,6 +608,7 @@ export const DataType: DataTypeDTO = {
                 createdAt: 'string',
                 playUser: 'number',
                 totalLikes: 'number',
+                isLiked: 'boolean',
               },
             ],
           },
@@ -655,6 +656,15 @@ export const DataType: DataTypeDTO = {
           },
         },
       ],
+      '/review/{reviewId}/like\n리뷰 좋아요': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+      ],
     },
     PATCH: {
       '/review/{reviewId}\n내가 참여한 방탈출 리뷰수정': [
@@ -694,6 +704,15 @@ export const DataType: DataTypeDTO = {
           label: 'Parameters',
           content: {
             themeId: 'number',
+          },
+        },
+      ],
+      '/review/{reviewId}/like\n리뷰 좋아요 취소': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
           },
         },
       ],
