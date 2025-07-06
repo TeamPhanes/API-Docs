@@ -789,6 +789,40 @@ export const DataType: DataTypeDTO = {
           },
         },
       ],
+      '/host/{hostName}\n호스트의 다른 모임 조회': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+        {
+          label: 'Responses',
+          content: {
+            totalCount: 'number',
+            currentPage: 'number',
+            data: [
+              {
+                gatheringId: 'number',
+                name: 'string',
+                listImage: 'string',
+                genres: 'string[]',
+                playtime: 'number',
+                themeId: 'number',
+                cafe: 'string',
+                spot: 'string',
+                dateTime: 'string',
+                registrationEnd: 'string',
+                capacity: 'number',
+                participantCount: 'number',
+                address: 'string',
+                level: 'string',
+              },
+            ],
+          },
+        },
+      ],
       '/gathering/{gatheringId}\n모임 상세 조회': [
         {
           label: 'Headers',
