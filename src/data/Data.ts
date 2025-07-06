@@ -492,6 +492,8 @@ export const DataType: DataTypeDTO = {
             keyword: 'string',
             city: 'string',
             state: 'string',
+            limit: 'number',
+            offset: 'number',
           },
         },
         {
