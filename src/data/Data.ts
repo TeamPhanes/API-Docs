@@ -798,6 +798,12 @@ export const DataType: DataTypeDTO = {
           },
         },
         {
+          label: 'Parameters',
+          content: {
+            gatheringId: 'number',
+          },
+        },
+        {
           label: 'Responses',
           content: {
             totalCount: 'number',
@@ -829,6 +835,12 @@ export const DataType: DataTypeDTO = {
           content: {
             ContentType: 'application/json',
             Authorization: 'Bearer {accessToken}',
+          },
+        },
+        {
+          label: 'Parameters',
+          content: {
+            gatheringId: 'number',
           },
         },
         {
