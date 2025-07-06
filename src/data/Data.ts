@@ -463,6 +463,8 @@ export const DataType: DataTypeDTO = {
             themeId: 'number',
             detailImage: 'string',
             story: 'string',
+            minPlayer: 'number',
+            maxPlayer: 'number',
           },
         },
       ],
