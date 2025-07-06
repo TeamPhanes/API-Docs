@@ -116,7 +116,7 @@ export const DataType: DataTypeDTO = {
           },
         },
       ],
-      '/user/schedule\n나의 일정': [
+      '/user/me/schedule\n나의 일정': [
         {
           label: 'Headers',
           content: {
@@ -359,31 +359,6 @@ export const DataType: DataTypeDTO = {
                 },
               ],
             },
-          },
-        },
-      ],
-    },
-    POST: {
-      '/user/me/theme\n내가 참여한 방탈출 리뷰쓰기': [
-        {
-          label: 'Headers',
-          content: {
-            ContentType: 'multipart/form-data',
-            Authorization: 'Bearer {accessToken}',
-          },
-        },
-        {
-          label: 'Request Body',
-          content: {
-            image: 'file',
-            numberOfPlayer: 'number',
-            success: 'boolean',
-            hint: 'number',
-            myRating: 'number',
-            themeReview: 'string',
-            levelReview: 'string',
-            storyReview: 'string',
-            reviewComment: 'string',
           },
         },
       ],
