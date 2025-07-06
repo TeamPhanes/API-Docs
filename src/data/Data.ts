@@ -754,7 +754,7 @@ export const DataType: DataTypeDTO = {
           },
         },
       ],
-      '/host/{hostName}\n호스트의 다른 모임 조회': [
+      '/gathering/host/{hostName}\n호스트의 다른 모임 조회': [
         {
           label: 'Headers',
           content: {
@@ -794,7 +794,7 @@ export const DataType: DataTypeDTO = {
           },
         },
       ],
-      '/date\n같은 날짜 다른 모임 조회': [
+      '/gathering/date\n같은 날짜 다른 모임 조회': [
         {
           label: 'Headers',
           content: {
