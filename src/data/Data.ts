@@ -116,7 +116,7 @@ export const DataType: DataTypeDTO = {
           },
         },
       ],
-      '/user/schedule\n나의 일정': [
+      '/user/me/schedule\n나의 일정': [
         {
           label: 'Headers',
           content: {
@@ -363,8 +363,8 @@ export const DataType: DataTypeDTO = {
         },
       ],
     },
-    POST: {
-      '/user/me/theme\n내가 참여한 방탈출 리뷰쓰기': [
+    PATCH: {
+      '/user/me\n내 프로필 및 이미지 수정': [
         {
           label: 'Headers',
           content: {
@@ -376,31 +376,24 @@ export const DataType: DataTypeDTO = {
           label: 'Request Body',
           content: {
             image: 'file',
-            numberOfPlayer: 'number',
-            success: 'boolean',
-            hint: 'number',
-            myRating: 'number',
-            themeReview: 'string',
-            levelReview: 'string',
-            storyReview: 'string',
-            reviewComment: 'string',
+            nickname: 'string',
+            comment: 'string',
+            emailMark: 'boolean',
+            genderMark: 'boolean',
           },
         },
       ],
-    },
-    PATCH: {
       '/user/me\n내 프로필 수정': [
         {
           label: 'Headers',
           content: {
-            ContentType: 'multipart/form-data',
+            ContentType: 'application/json',
             Authorization: 'Bearer {accessToken}',
           },
         },
         {
           label: 'Request Body',
           content: {
-            image: 'file',
             nickname: 'string',
             comment: 'string',
             emailMark: 'boolean',
@@ -465,12 +458,6 @@ export const DataType: DataTypeDTO = {
           },
         },
         {
-          label: 'Parameters',
-          content: {
-            themeId: 'number',
-          },
-        },
-        {
           label: 'Responses',
           content: {
             themeId: 'number',
@@ -492,6 +479,8 @@ export const DataType: DataTypeDTO = {
             keyword: 'string',
             city: 'string',
             state: 'string',
+            limit: 'number',
+            offset: 'number',
           },
         },
         {
@@ -514,12 +503,6 @@ export const DataType: DataTypeDTO = {
             Authorization: 'Bearer {accessToken}',
           },
         },
-        {
-          label: 'Parameters',
-          content: {
-            themeId: 'number',
-          },
-        },
       ],
       '/theme/{themeId}/visit\n방탈출 참여': [
         {
@@ -527,12 +510,6 @@ export const DataType: DataTypeDTO = {
           content: {
             ContentType: 'application/json',
             Authorization: 'Bearer {accessToken}',
-          },
-        },
-        {
-          label: 'Parameters',
-          content: {
-            themeId: 'number',
           },
         },
       ],
@@ -546,12 +523,6 @@ export const DataType: DataTypeDTO = {
             Authorization: 'Bearer {accessToken}',
           },
         },
-        {
-          label: 'Parameters',
-          content: {
-            themeId: 'number',
-          },
-        },
       ],
       '/theme/{themeId}/visit\n방탈출 참여 해제': [
         {
@@ -559,12 +530,6 @@ export const DataType: DataTypeDTO = {
           content: {
             ContentType: 'application/json',
             Authorization: 'Bearer {accessToken}',
-          },
-        },
-        {
-          label: 'Parameters',
-          content: {
-            themeId: 'number',
           },
         },
       ],
@@ -789,17 +754,91 @@ export const DataType: DataTypeDTO = {
           },
         },
       ],
-      '/gathering/{gatheringId}\n모임 상세 조회': [
+      '/gathering/host/{hostName}\n호스트의 다른 모임 조회': [
         {
           label: 'Headers',
           content: {
             ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
           },
         },
         {
           label: 'Parameters',
           content: {
             gatheringId: 'number',
+          },
+        },
+        {
+          label: 'Responses',
+          content: {
+            totalCount: 'number',
+            currentPage: 'number',
+            data: [
+              {
+                gatheringId: 'number',
+                name: 'string',
+                listImage: 'string',
+                genres: 'string[]',
+                playtime: 'number',
+                themeId: 'number',
+                cafe: 'string',
+                spot: 'string',
+                dateTime: 'string',
+                registrationEnd: 'string',
+                capacity: 'number',
+                participantCount: 'number',
+                address: 'string',
+                level: 'string',
+              },
+            ],
+          },
+        },
+      ],
+      '/gathering/date\n같은 날짜 다른 모임 조회': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+        {
+          label: 'Parameters',
+          content: {
+            gatheringId: 'number',
+          },
+        },
+        {
+          label: 'Responses',
+          content: {
+            totalCount: 'number',
+            currentPage: 'number',
+            data: [
+              {
+                gatheringId: 'number',
+                name: 'string',
+                listImage: 'string',
+                genres: 'string[]',
+                playtime: 'number',
+                themeId: 'number',
+                cafe: 'string',
+                spot: 'string',
+                dateTime: 'string',
+                registrationEnd: 'string',
+                capacity: 'number',
+                participantCount: 'number',
+                address: 'string',
+                level: 'string',
+              },
+            ],
+          },
+        },
+      ],
+      '/gathering/{gatheringId}\n모임 상세 조회': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
           },
         },
         {
@@ -851,12 +890,6 @@ export const DataType: DataTypeDTO = {
             Authorization: 'Bearer {accessToken}',
           },
         },
-        {
-          label: 'Parameters',
-          content: {
-            gatheringId: 'number',
-          },
-        },
       ],
     },
     PATCH: {
@@ -892,12 +925,6 @@ export const DataType: DataTypeDTO = {
             Authorization: 'Bearer {accessToken}',
           },
         },
-        {
-          label: 'Parameters',
-          content: {
-            gatheringId: 'number',
-          },
-        },
       ],
       '/gathering/{gatheringId}/like\n모임 찜 삭제': [
         {
@@ -907,28 +934,16 @@ export const DataType: DataTypeDTO = {
             Authorization: 'Bearer {accessToken}',
           },
         },
-        {
-          label: 'Parameters',
-          content: {
-            gatheringId: 'number',
-          },
-        },
       ],
     },
   },
   GatheringMember: {
     GET: {
-      '/gathering/member\n모임 참가자 목록 조회': [
+      '/gathering/{gatheringId}/member\n모임 참가자 목록 조회': [
         {
           label: 'Headers',
           content: {
             ContentType: 'application/json',
-          },
-        },
-        {
-          label: 'Parameters',
-          content: {
-            gatheringId: 'number',
           },
         },
         {
@@ -947,35 +962,23 @@ export const DataType: DataTypeDTO = {
       ],
     },
     POST: {
-      '/gathering/member\n모임 참여': [
+      '/gathering/{gatheringId}/member\n모임 참여': [
         {
           label: 'Headers',
           content: {
             ContentType: 'application/json',
             Authorization: 'Bearer {accessToken}',
-          },
-        },
-        {
-          label: 'Parameters',
-          content: {
-            gatheringId: 'number',
           },
         },
       ],
     },
     DELETE: {
-      '/gathering/member\n모임 참여 취소': [
+      '/gathering/{gatheringId}/member\n모임 참여 취소': [
         {
           label: 'Headers',
           content: {
             ContentType: 'application/json',
             Authorization: 'Bearer {accessToken}',
-          },
-        },
-        {
-          label: 'Parameters',
-          content: {
-            gatheringId: 'number',
           },
         },
       ],
@@ -1061,7 +1064,6 @@ export const DataType: DataTypeDTO = {
           label: 'Parameters',
           content: {
             gatheringId: 'number',
-            commentId: 'number',
           },
         },
         {
@@ -1085,7 +1087,6 @@ export const DataType: DataTypeDTO = {
           label: 'Parameters',
           content: {
             gatheringId: 'number',
-            commentId: 'number',
           },
         },
       ],
