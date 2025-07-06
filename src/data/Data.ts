@@ -458,12 +458,6 @@ export const DataType: DataTypeDTO = {
           },
         },
         {
-          label: 'Parameters',
-          content: {
-            themeId: 'number',
-          },
-        },
-        {
           label: 'Responses',
           content: {
             themeId: 'number',
@@ -509,12 +503,6 @@ export const DataType: DataTypeDTO = {
             Authorization: 'Bearer {accessToken}',
           },
         },
-        {
-          label: 'Parameters',
-          content: {
-            themeId: 'number',
-          },
-        },
       ],
       '/theme/{themeId}/visit\n방탈출 참여': [
         {
@@ -522,12 +510,6 @@ export const DataType: DataTypeDTO = {
           content: {
             ContentType: 'application/json',
             Authorization: 'Bearer {accessToken}',
-          },
-        },
-        {
-          label: 'Parameters',
-          content: {
-            themeId: 'number',
           },
         },
       ],
@@ -541,12 +523,6 @@ export const DataType: DataTypeDTO = {
             Authorization: 'Bearer {accessToken}',
           },
         },
-        {
-          label: 'Parameters',
-          content: {
-            themeId: 'number',
-          },
-        },
       ],
       '/theme/{themeId}/visit\n방탈출 참여 해제': [
         {
@@ -554,12 +530,6 @@ export const DataType: DataTypeDTO = {
           content: {
             ContentType: 'application/json',
             Authorization: 'Bearer {accessToken}',
-          },
-        },
-        {
-          label: 'Parameters',
-          content: {
-            themeId: 'number',
           },
         },
       ],
@@ -872,12 +842,6 @@ export const DataType: DataTypeDTO = {
           },
         },
         {
-          label: 'Parameters',
-          content: {
-            gatheringId: 'number',
-          },
-        },
-        {
           label: 'Responses',
           content: {
             gatheringId: 'number',
@@ -926,12 +890,6 @@ export const DataType: DataTypeDTO = {
             Authorization: 'Bearer {accessToken}',
           },
         },
-        {
-          label: 'Parameters',
-          content: {
-            gatheringId: 'number',
-          },
-        },
       ],
     },
     PATCH: {
@@ -967,12 +925,6 @@ export const DataType: DataTypeDTO = {
             Authorization: 'Bearer {accessToken}',
           },
         },
-        {
-          label: 'Parameters',
-          content: {
-            gatheringId: 'number',
-          },
-        },
       ],
       '/gathering/{gatheringId}/like\n모임 찜 삭제': [
         {
@@ -980,12 +932,6 @@ export const DataType: DataTypeDTO = {
           content: {
             ContentType: 'application/json',
             Authorization: 'Bearer {accessToken}',
-          },
-        },
-        {
-          label: 'Parameters',
-          content: {
-            gatheringId: 'number',
           },
         },
       ],
@@ -998,12 +944,6 @@ export const DataType: DataTypeDTO = {
           label: 'Headers',
           content: {
             ContentType: 'application/json',
-          },
-        },
-        {
-          label: 'Parameters',
-          content: {
-            gatheringId: 'number',
           },
         },
         {
@@ -1030,12 +970,6 @@ export const DataType: DataTypeDTO = {
             Authorization: 'Bearer {accessToken}',
           },
         },
-        {
-          label: 'Parameters',
-          content: {
-            gatheringId: 'number',
-          },
-        },
       ],
     },
     DELETE: {
@@ -1045,12 +979,6 @@ export const DataType: DataTypeDTO = {
           content: {
             ContentType: 'application/json',
             Authorization: 'Bearer {accessToken}',
-          },
-        },
-        {
-          label: 'Parameters',
-          content: {
-            gatheringId: 'number',
           },
         },
       ],
@@ -1136,7 +1064,6 @@ export const DataType: DataTypeDTO = {
           label: 'Parameters',
           content: {
             gatheringId: 'number',
-            commentId: 'number',
           },
         },
         {
@@ -1160,7 +1087,6 @@ export const DataType: DataTypeDTO = {
           label: 'Parameters',
           content: {
             gatheringId: 'number',
-            commentId: 'number',
           },
         },
       ],
