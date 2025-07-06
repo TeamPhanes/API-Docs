@@ -939,7 +939,7 @@ export const DataType: DataTypeDTO = {
   },
   GatheringMember: {
     GET: {
-      '/gathering/member\n모임 참가자 목록 조회': [
+      '/gathering/{gatheringId}/member\n모임 참가자 목록 조회': [
         {
           label: 'Headers',
           content: {
@@ -962,7 +962,7 @@ export const DataType: DataTypeDTO = {
       ],
     },
     POST: {
-      '/gathering/member\n모임 참여': [
+      '/gathering/{gatheringId}/member\n모임 참여': [
         {
           label: 'Headers',
           content: {
@@ -973,7 +973,7 @@ export const DataType: DataTypeDTO = {
       ],
     },
     DELETE: {
-      '/gathering/member\n모임 참여 취소': [
+      '/gathering/{gatheringId}/member\n모임 참여 취소': [
         {
           label: 'Headers',
           content: {
