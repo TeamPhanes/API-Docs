@@ -364,7 +364,7 @@ export const DataType: DataTypeDTO = {
       ],
     },
     PATCH: {
-      '/user/me\n내 프로필 수정': [
+      '/user/me\n내 프로필 및 이미지 수정': [
         {
           label: 'Headers',
           content: {
@@ -376,6 +376,24 @@ export const DataType: DataTypeDTO = {
           label: 'Request Body',
           content: {
             image: 'file',
+            nickname: 'string',
+            comment: 'string',
+            emailMark: 'boolean',
+            genderMark: 'boolean',
+          },
+        },
+      ],
+      '/user/me\n내 프로필 수정': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+        {
+          label: 'Request Body',
+          content: {
             nickname: 'string',
             comment: 'string',
             emailMark: 'boolean',
