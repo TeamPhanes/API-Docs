@@ -1001,6 +1001,7 @@ export const DataType: DataTypeDTO = {
             gatheringId: 'number',
             limit: 'number',
             offset: 'number',
+            sortBy: 'create | new',
           },
         },
         {
