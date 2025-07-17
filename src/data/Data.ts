@@ -421,6 +421,7 @@ export const DataType: DataTypeDTO = {
             state: 'string',
             city: 'string',
             genre: 'string',
+            spot: 'string',
             limit: 'number',
             offset: 'number',
           },
