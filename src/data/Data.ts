@@ -92,7 +92,7 @@ export const DataType: DataTypeDTO = {
           content: {
             state: 'string[]',
             city: 'string[]',
-            genre: 'string[]',
+            genres: 'string[]',
             page: 'number',
             size: 'number',
           },
@@ -137,7 +137,7 @@ export const DataType: DataTypeDTO = {
           content: {
             state: 'string[]',
             city: 'string[]',
-            genre: 'string[]',
+            genres: 'string[]',
             page: 'number',
             size: 'number',
           },
@@ -182,7 +182,7 @@ export const DataType: DataTypeDTO = {
           content: {
             state: 'string[]',
             city: 'string[]',
-            genre: 'string[]',
+            genres: 'string[]',
             page: 'number',
             size: 'number',
           },
