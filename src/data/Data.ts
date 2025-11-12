@@ -90,8 +90,7 @@ export const DataType: DataTypeDTO = {
         {
           label: 'Parameters',
           content: {
-            state: 'string[]',
-            city: 'string[]',
+            locations: 'string[]',
             genres: 'string[]',
             page: 'number',
             size: 'number',
@@ -135,8 +134,7 @@ export const DataType: DataTypeDTO = {
         {
           label: 'Parameters',
           content: {
-            state: 'string[]',
-            city: 'string[]',
+            locations: 'string[]',
             genres: 'string[]',
             page: 'number',
             size: 'number',
@@ -180,8 +178,7 @@ export const DataType: DataTypeDTO = {
         {
           label: 'Parameters',
           content: {
-            state: 'string[]',
-            city: 'string[]',
+            locations: 'string[]',
             genres: 'string[]',
             page: 'number',
             size: 'number',
