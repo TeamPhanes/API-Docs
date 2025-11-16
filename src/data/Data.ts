@@ -403,6 +403,8 @@ export const DataType: DataTypeDTO = {
                 name: 'string',
                 image: 'string',
                 date: 'date',
+                participantCount: 'number',
+                capacity: 'number',
                 title: 'string',
                 address: 'string',
                 genres: 'string[]',
