@@ -396,8 +396,7 @@ export const DataType: DataTypeDTO = {
                 name: 'string',
                 image: 'string',
                 date: 'date',
-                cafeName: 'string',
-                spotName: 'string',
+                title: 'string',
                 address: 'string',
                 genres: 'string[]',
                 playtime: 'number',
@@ -405,6 +404,28 @@ export const DataType: DataTypeDTO = {
                 isLiked: 'boolean',
               },
             ],
+          },
+        },
+      ],
+    },
+    POST: {
+      '/gathering/like/{gatheringId}\n모임 좋아요': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+      ],
+    },
+    DELETE: {
+      '/gathering/like/{gatheringId}\n모임 좋아요 취소': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
           },
         },
       ],
