@@ -316,9 +316,14 @@ export const DataType: DataTypeDTO = {
               {
                 avgScore: 'number',
                 createdGatheringCount: 'number',
-                reviewCount: {
-                  reviewScore: 'number',
-                  count: 'number',
+                reviewCountSummary: {
+                  total: 'number',
+                  counts: [
+                    {
+                      score: 'number',
+                      count: 'number',
+                    },
+                  ],
                 },
                 userEvaluation: {
                   theme: {
