@@ -363,7 +363,7 @@ export const DataType: DataTypeDTO = {
       ],
     },
     POST: {
-      '/review/like/{themeId}\n리뷰 좋아요': [
+      '/review/like/{reviewId}\n리뷰 좋아요': [
         {
           label: 'Headers',
           content: {
@@ -374,7 +374,7 @@ export const DataType: DataTypeDTO = {
       ],
     },
     DELETE: {
-      '/review/like/{themeId}\n리뷰 좋아요 취소': [
+      '/review/like/{reviewId}\n리뷰 좋아요 취소': [
         {
           label: 'Headers',
           content: {
