@@ -475,6 +475,12 @@ export const DataType: DataTypeDTO = {
           },
         },
         {
+          label: 'Parameters',
+          content: {
+            date: 'date',
+          },
+        },
+        {
           label: 'Responses',
           content: {
             totalPages: 'number',
