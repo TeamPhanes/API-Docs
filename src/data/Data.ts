@@ -450,6 +450,7 @@ export const DataType: DataTypeDTO = {
             image: 'string',
             price: 'number',
             isIndividual: 'boolean',
+            participantCount: 'number',
             participants: [
               {
                 id: 'number',
