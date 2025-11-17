@@ -508,6 +508,15 @@ export const DataType: DataTypeDTO = {
       ],
       '/gathering/comment\n댓글 조회': [
         {
+          label: 'Parameters',
+          content: {
+            gatheringId: 'number',
+            page: 'number',
+            size: 'number',
+            sort: 'string[]',
+          },
+        },
+        {
           label: 'Responses',
           content: {
             comments: [
