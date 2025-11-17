@@ -387,7 +387,7 @@ export const DataType: DataTypeDTO = {
   },
   Gathering: {
     GET: {
-      '/gathering/{themeId}\n생성된 모임 조회': [
+      '/gathering\n모임 조회': [
         {
           label: 'Headers',
           content: {
@@ -398,6 +398,9 @@ export const DataType: DataTypeDTO = {
         {
           label: 'Parameters',
           content: {
+            themeId: 'number',
+            locations: 'string[]',
+            genres: 'string[]',
             page: 'number',
             size: 'number',
           },
@@ -421,6 +424,123 @@ export const DataType: DataTypeDTO = {
                 playtime: 'number',
                 level: 'string',
                 isLiked: 'boolean',
+              },
+            ],
+          },
+        },
+      ],
+      '/gathering/{gatheringId}\n모임 상세 조회': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+        {
+          label: 'Responses',
+          content: {
+            id: 'number',
+            name: 'string',
+            capacity: 'number',
+            date: 'date',
+            registrationStart: 'date',
+            registrationEnd: 'date',
+            content: 'string',
+            image: 'string',
+            price: 'number',
+            isIndividual: 'boolean',
+            participantCount: 'number',
+            participants: [
+              {
+                id: 'number',
+                profileImage: 'string',
+                nickname: 'string',
+                email: 'string',
+                role: 'string',
+              },
+            ],
+            title: 'string',
+            genres: 'string[]',
+            isLiked: 'boolean',
+          },
+        },
+      ],
+      '/gathering/date\n같은 일정 다른 모임 조회': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+        {
+          label: 'Parameters',
+          content: {
+            date: 'date',
+            page: 'number',
+            size: 'number',
+          },
+        },
+        {
+          label: 'Responses',
+          content: {
+            totalPages: 'number',
+            number: 'number',
+            content: [
+              {
+                id: 'number',
+                name: 'string',
+                image: 'string',
+                date: 'date',
+                participantCount: 'number',
+                capacity: 'number',
+                title: 'string',
+                address: 'string',
+                genres: 'string[]',
+                playtime: 'number',
+                level: 'string',
+                isLiked: 'boolean',
+              },
+            ],
+          },
+        },
+      ],
+      '/gathering/comment\n댓글 조회': [
+        {
+          label: 'Parameters',
+          content: {
+            gatheringId: 'number',
+            page: 'number',
+            size: 'number',
+            sort: 'string[]',
+          },
+        },
+        {
+          label: 'Responses',
+          content: {
+            comments: [
+              {
+                id: 'number',
+                userId: 'number',
+                content: 'string',
+                createdAt: 'date',
+                updatedAt: 'date',
+                nickname: 'string',
+                profileImage: 'string',
+                email: 'string',
+                comments: [
+                  {
+                    id: 'number',
+                    userId: 'number',
+                    content: 'string',
+                    createdAt: 'date',
+                    updatedAt: 'date',
+                    nickname: 'string',
+                    profileImage: 'string',
+                    email: 'string',
+                  },
+                ],
               },
             ],
           },
