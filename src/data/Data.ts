@@ -478,6 +478,8 @@ export const DataType: DataTypeDTO = {
           label: 'Parameters',
           content: {
             date: 'date',
+            page: 'number',
+            size: 'number',
           },
         },
         {
