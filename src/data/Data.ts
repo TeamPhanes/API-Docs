@@ -462,30 +462,6 @@ export const DataType: DataTypeDTO = {
             title: 'string',
             genres: 'string[]',
             isLiked: 'boolean',
-            comments: [
-              {
-                id: 'number',
-                userId: 'number',
-                content: 'string',
-                createdAt: 'date',
-                updatedAt: 'date',
-                nickname: 'string',
-                profileImage: 'string',
-                email: 'string',
-                comments: [
-                  {
-                    id: 'number',
-                    userId: 'number',
-                    content: 'string',
-                    createdAt: 'date',
-                    updatedAt: 'date',
-                    nickname: 'string',
-                    profileImage: 'string',
-                    email: 'string',
-                  },
-                ],
-              },
-            ],
           },
         },
       ],
@@ -516,6 +492,37 @@ export const DataType: DataTypeDTO = {
                 playtime: 'number',
                 level: 'string',
                 isLiked: 'boolean',
+              },
+            ],
+          },
+        },
+      ],
+      '/gathering/comment\n댓글 조회': [
+        {
+          label: 'Responses',
+          content: {
+            comments: [
+              {
+                id: 'number',
+                userId: 'number',
+                content: 'string',
+                createdAt: 'date',
+                updatedAt: 'date',
+                nickname: 'string',
+                profileImage: 'string',
+                email: 'string',
+                comments: [
+                  {
+                    id: 'number',
+                    userId: 'number',
+                    content: 'string',
+                    createdAt: 'date',
+                    updatedAt: 'date',
+                    nickname: 'string',
+                    profileImage: 'string',
+                    email: 'string',
+                  },
+                ],
               },
             ],
           },
