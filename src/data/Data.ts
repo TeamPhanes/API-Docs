@@ -456,6 +456,7 @@ export const DataType: DataTypeDTO = {
                 profileImage: 'string',
                 nickname: 'string',
                 email: 'string',
+                role: 'string',
               },
             ],
             title: 'string',
