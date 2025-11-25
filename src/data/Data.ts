@@ -75,6 +75,70 @@ export const DataType: DataTypeDTO = {
           },
         },
       ],
+      '/user/me/profile\n내 프로필 조회': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+        {
+          label: 'Responses',
+          content: {
+            nickname: 'string',
+            email: 'string',
+            profileComment: 'string',
+            profileImage: 'string',
+            createdAt: 'date',
+            updatedAt: 'date',
+            createGatheringCount: 'number',
+            visitGatheringCount: 'number',
+            visitThemeCount: 'number',
+            successThemeCount: 'number',
+            achievements: [
+              {
+                id: 'number',
+                progress: 'number',
+                isRepresentative: 'boolean',
+                completedAt: 'date',
+              },
+            ],
+          },
+        },
+      ],
+      '/user/{userId}\n다른 유저 조회': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+        {
+          label: 'Responses',
+          content: {
+            nickname: 'string',
+            email: 'string',
+            profileComment: 'string',
+            profileImage: 'string',
+            createdAt: 'date',
+            updatedAt: 'date',
+            createGatheringCount: 'number',
+            visitGatheringCount: 'number',
+            visitThemeCount: 'number',
+            successThemeCount: 'number',
+            achievements: [
+              {
+                id: 'number',
+                progress: 'number',
+                isRepresentative: 'boolean',
+                completedAt: 'date',
+              },
+            ],
+          },
+        },
+      ],
     },
   },
   Theme: {
@@ -124,50 +188,6 @@ export const DataType: DataTypeDTO = {
         },
       ],
       '/theme/like\n방탈출 좋아요 목록 조회': [
-        {
-          label: 'Headers',
-          content: {
-            ContentType: 'application/json',
-            Authorization: 'Bearer {accessToken}',
-          },
-        },
-        {
-          label: 'Parameters',
-          content: {
-            locations: 'string[]',
-            genres: 'string[]',
-            page: 'number',
-            size: 'number',
-          },
-        },
-        {
-          label: 'Responses',
-          content: {
-            totalPages: 'number',
-            number: 'number',
-            content: [
-              {
-                id: 'number',
-                title: 'string',
-                playtime: 'number',
-                level: 'string',
-                image: 'string',
-                minPlayer: 'number',
-                maxPlayer: 'number',
-                cafeName: 'string',
-                spotName: 'string',
-                address: 'string',
-                genres: 'string[]',
-                reviewCount: 'number',
-                avgScore: 'number',
-                isLiked: 'boolean',
-                isVisited: 'boolean',
-              },
-            ],
-          },
-        },
-      ],
-      '/theme/visit\n방탈출 참여한 목록 조회': [
         {
           label: 'Headers',
           content: {
