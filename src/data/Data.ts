@@ -231,50 +231,6 @@ export const DataType: DataTypeDTO = {
           },
         },
       ],
-      '/theme/visit\n방탈출 참여한 목록 조회': [
-        {
-          label: 'Headers',
-          content: {
-            ContentType: 'application/json',
-            Authorization: 'Bearer {accessToken}',
-          },
-        },
-        {
-          label: 'Parameters',
-          content: {
-            locations: 'string[]',
-            genres: 'string[]',
-            page: 'number',
-            size: 'number',
-          },
-        },
-        {
-          label: 'Responses',
-          content: {
-            totalPages: 'number',
-            number: 'number',
-            content: [
-              {
-                id: 'number',
-                title: 'string',
-                playtime: 'number',
-                level: 'string',
-                image: 'string',
-                minPlayer: 'number',
-                maxPlayer: 'number',
-                cafeName: 'string',
-                spotName: 'string',
-                address: 'string',
-                genres: 'string[]',
-                reviewCount: 'number',
-                avgScore: 'number',
-                isLiked: 'boolean',
-                isVisited: 'boolean',
-              },
-            ],
-          },
-        },
-      ],
       '/theme/{themeId}\n방탈출 상세 정보 조회': [
         {
           label: 'Headers',
