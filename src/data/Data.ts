@@ -75,6 +75,70 @@ export const DataType: DataTypeDTO = {
           },
         },
       ],
+      '/user/me/profile\n내 프로필 조회': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+        {
+          label: 'Responses',
+          content: {
+            nickname: 'string',
+            email: 'string',
+            profileComment: 'string',
+            profileImage: 'string',
+            createdAt: 'date',
+            updatedAt: 'date',
+            createGatheringCount: 'number',
+            visitGatheringCount: 'number',
+            visitThemeCount: 'number',
+            successThemeCount: 'number',
+            achievements: [
+              {
+                id: 'number',
+                progress: 'number',
+                isRepresentative: 'boolean',
+                completedAt: 'date',
+              },
+            ],
+          },
+        },
+      ],
+      '/user/{userId}\n다른 유저 조회': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+        {
+          label: 'Responses',
+          content: {
+            nickname: 'string',
+            email: 'string',
+            profileComment: 'string',
+            profileImage: 'string',
+            createdAt: 'date',
+            updatedAt: 'date',
+            createGatheringCount: 'number',
+            visitGatheringCount: 'number',
+            visitThemeCount: 'number',
+            successThemeCount: 'number',
+            achievements: [
+              {
+                id: 'number',
+                progress: 'number',
+                isRepresentative: 'boolean',
+                completedAt: 'date',
+              },
+            ],
+          },
+        },
+      ],
     },
   },
   Theme: {
