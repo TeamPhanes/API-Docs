@@ -216,8 +216,10 @@ export const DataType: DataTypeDTO = {
                 capacity: 'number',
                 participants: [
                   {
+                    id: 'number',
                     profileImage: 'string',
                     nickname: 'string',
+                    email: 'string',
                   },
                 ],
                 isLiked: 'boolean',
