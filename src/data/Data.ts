@@ -366,7 +366,7 @@ export const DataType: DataTypeDTO = {
             page: 'number',
             size: 'number',
             sort: 'string[]',
-            genres: 'string[]',
+            genre: 'string',
           },
         },
         {
