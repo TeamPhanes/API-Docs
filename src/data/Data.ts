@@ -232,6 +232,20 @@ export const DataType: DataTypeDTO = {
       ],
     },
   },
+  CAFE: {
+    GET: {
+      '/cafe\n카페 목록 조회': [
+        {
+          label: 'Responses',
+          content: {
+            id: 'number',
+            name: 'string',
+            image: 'string',
+          },
+        },
+      ],
+    },
+  },
   Theme: {
     GET: {
       '/theme\n방탈출 목록 조회': [
