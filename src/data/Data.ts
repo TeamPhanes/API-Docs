@@ -359,6 +359,31 @@ export const DataType: DataTypeDTO = {
           },
         },
       ],
+      '/theme/preview\n방탈출 프리뷰 조회': [
+        {
+          label: 'Parameters',
+          content: {
+            page: 'number',
+            size: 'number',
+            sort: 'string[]',
+            genres: 'string[]',
+          },
+        },
+        {
+          label: 'Responses',
+          content: {
+            totalPages: 'number',
+            number: 'number',
+            content: [
+              {
+                id: 'number',
+                title: 'string',
+                image: 'string',
+              },
+            ],
+          },
+        },
+      ],
     },
     POST: {
       '/theme/like/{themeId}\n방탈출 좋아요': [
