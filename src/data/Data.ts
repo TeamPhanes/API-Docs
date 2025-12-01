@@ -232,6 +232,20 @@ export const DataType: DataTypeDTO = {
       ],
     },
   },
+  CAFE: {
+    GET: {
+      '/cafe\n카페 목록 조회': [
+        {
+          label: 'Responses',
+          content: {
+            id: 'number',
+            name: 'string',
+            image: 'string',
+          },
+        },
+      ],
+    },
+  },
   Theme: {
     GET: {
       '/theme\n방탈출 목록 조회': [
@@ -354,6 +368,31 @@ export const DataType: DataTypeDTO = {
                 genres: 'string[]',
                 isLiked: 'boolean',
                 isVisited: 'boolean',
+              },
+            ],
+          },
+        },
+      ],
+      '/theme/preview\n방탈출 프리뷰 조회': [
+        {
+          label: 'Parameters',
+          content: {
+            page: 'number',
+            size: 'number',
+            sort: 'string[]',
+            genre: 'string',
+          },
+        },
+        {
+          label: 'Responses',
+          content: {
+            totalPages: 'number',
+            number: 'number',
+            content: [
+              {
+                id: 'number',
+                title: 'string',
+                image: 'string',
               },
             ],
           },
