@@ -163,6 +163,8 @@ export const DataType: DataTypeDTO = {
               {
                 id: 'number',
                 title: 'string',
+                cafeName: 'string',
+                spotName: 'string',
                 image: 'string',
                 genres: 'string[]',
                 visitDate: 'date',
