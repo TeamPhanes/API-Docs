@@ -139,6 +139,97 @@ export const DataType: DataTypeDTO = {
           },
         },
       ],
+      '/user/me/theme/visit\n참여한 방탈출 조회': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+        {
+          label: 'Parameters',
+          content: {
+            page: 'number',
+            size: 'number',
+          },
+        },
+        {
+          label: 'Responses',
+          content: {
+            totalPages: 'number',
+            number: 'number',
+            content: [
+              {
+                id: 'number',
+                title: 'string',
+                cafeName: 'string',
+                spotName: 'string',
+                image: 'string',
+                genres: 'string[]',
+                visitDate: 'date',
+                score: 'number',
+                themeReview: 'string',
+                levelReview: 'string',
+                storyReview: 'string',
+                hint: 'number',
+                numberOfPlayer: 'number',
+                isSuccess: 'boolean',
+                content: 'string',
+                reviewImage: 'string',
+              },
+            ],
+          },
+        },
+      ],
+      '/user/me/gathering/visit\n참여한 모임 조회': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+        {
+          label: 'Parameters',
+          content: {
+            page: 'number',
+            size: 'number',
+          },
+        },
+        {
+          label: 'Responses',
+          content: {
+            totalPages: 'number',
+            number: 'number',
+            content: [
+              {
+                id: 'number',
+                genres: 'string[]',
+                title: 'string',
+                cafeName: 'string',
+                spotName: 'string',
+                address: 'string',
+                playtime: 'number',
+                level: 'string',
+                image: 'string',
+                name: 'string',
+                date: 'date',
+                capacity: 'number',
+                participants: [
+                  {
+                    id: 'number',
+                    profileImage: 'string',
+                    nickname: 'string',
+                    email: 'string',
+                  },
+                ],
+                isLiked: 'boolean',
+              },
+            ],
+          },
+        },
+      ],
     },
   },
   Theme: {
@@ -419,6 +510,47 @@ export const DataType: DataTypeDTO = {
           label: 'Parameters',
           content: {
             themeId: 'number',
+            locations: 'string[]',
+            genres: 'string[]',
+            page: 'number',
+            size: 'number',
+          },
+        },
+        {
+          label: 'Responses',
+          content: {
+            totalPages: 'number',
+            number: 'number',
+            content: [
+              {
+                id: 'number',
+                name: 'string',
+                image: 'string',
+                date: 'date',
+                participantCount: 'number',
+                capacity: 'number',
+                title: 'string',
+                address: 'string',
+                genres: 'string[]',
+                playtime: 'number',
+                level: 'string',
+                isLiked: 'boolean',
+              },
+            ],
+          },
+        },
+      ],
+      '/gathering/like\n모임 좋아요 목록 조회': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+        {
+          label: 'Parameters',
+          content: {
             locations: 'string[]',
             genres: 'string[]',
             page: 'number',
