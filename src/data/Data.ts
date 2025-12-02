@@ -176,7 +176,7 @@ export const DataType: DataTypeDTO = {
                 numberOfPlayer: 'number',
                 isSuccess: 'boolean',
                 content: 'string',
-                reviewImage: 'string',
+                reviewImages: 'string[]',
               },
             ],
           },
@@ -442,6 +442,38 @@ export const DataType: DataTypeDTO = {
   },
   Review: {
     GET: {
+      '/review/summary/{themeId}\n리뷰 요약 정보 조회': [
+        {
+          label: 'Responses',
+          content: {
+            avgScore: 'number',
+            createdGatheringCount: 'number',
+            reviewCountSummary: {
+              total: 'number',
+              counts: [
+                {
+                  score: 'number',
+                  count: 'number',
+                },
+              ],
+            },
+            userEvaluation: {
+              theme: {
+                label: 'string',
+                percent: 'number',
+              },
+              level: {
+                label: 'string',
+                percent: 'number',
+              },
+              story: {
+                label: 'string',
+                percent: 'number',
+              },
+            },
+          },
+        },
+      ],
       '/review/{themeId}\n리뷰 목록 조회': [
         {
           label: 'Headers',
@@ -464,48 +496,21 @@ export const DataType: DataTypeDTO = {
             number: 'number',
             content: [
               {
-                avgScore: 'number',
-                createdGatheringCount: 'number',
-                reviewCountSummary: {
-                  total: 'number',
-                  counts: [
-                    {
-                      score: 'number',
-                      count: 'number',
-                    },
-                  ],
-                },
-                userEvaluation: {
-                  theme: {
-                    label: 'string',
-                    percent: 'number',
-                  },
-                  level: {
-                    label: 'string',
-                    percent: 'number',
-                  },
-                  story: {
-                    label: 'string',
-                    percent: 'number',
-                  },
-                },
-                contents: {
-                  id: 'number',
-                  nickname: 'string',
-                  profileImage: 'string',
-                  score: 'score',
-                  content: 'string',
-                  image: 'string',
-                  isSuccess: 'boolean',
-                  hint: 'number',
-                  numberOfPlayer: 'number',
-                  themeReview: 'string',
-                  levelReview: 'string',
-                  storyReview: 'string',
-                  likeCount: 'number',
-                  isLiked: 'boolean',
-                  createdAt: 'date',
-                },
+                id: 'number',
+                nickname: 'string',
+                profileImage: 'string',
+                score: 'score',
+                content: 'string',
+                images: 'string[]',
+                isSuccess: 'boolean',
+                hint: 'number',
+                numberOfPlayer: 'number',
+                themeReview: 'string',
+                levelReview: 'string',
+                storyReview: 'string',
+                likeCount: 'number',
+                isLiked: 'boolean',
+                createdAt: 'date',
               },
             ],
           },
