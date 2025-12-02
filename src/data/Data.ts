@@ -232,7 +232,7 @@ export const DataType: DataTypeDTO = {
       ],
     },
   },
-  CAFE: {
+  Cafe: {
     GET: {
       '/cafe\n카페 목록 조회': [
         {
