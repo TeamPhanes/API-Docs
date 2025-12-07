@@ -398,6 +398,32 @@ export const DataType: DataTypeDTO = {
           },
         },
       ],
+      'theme/search\n방탈출 검색': [
+        {
+          label: 'Parameters',
+          content: {
+            size: 'number',
+            keyword: 'string',
+            cursor: 'encoded string',
+          },
+        },
+        {
+          label: 'Responses',
+          content: {
+            cursor: {
+              id: 'string',
+              score: 'number',
+            },
+            contents: [
+              {
+                id: 'number',
+                title: 'string',
+                spotName: 'string',
+              },
+            ],
+          },
+        },
+      ],
     },
     POST: {
       '/theme/like/{themeId}\n방탈출 좋아요': [
@@ -744,6 +770,29 @@ export const DataType: DataTypeDTO = {
       ],
     },
     POST: {
+      '/gathering\n모임 생성': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+        {
+          label: 'Request Body',
+          content: {
+            themeId: 'number',
+            name: 'string',
+            capacity: 'number',
+            date: 'date',
+            registrationStart: 'date',
+            registrationEnd: 'date',
+            content: 'string',
+            isIndividual: 'boolean',
+            price: 'number',
+          },
+        },
+      ],
       '/gathering/like/{gatheringId}\n모임 좋아요': [
         {
           label: 'Headers',
