@@ -544,6 +544,33 @@ export const DataType: DataTypeDTO = {
       ],
     },
     POST: {
+      '/review/{themeId}\n리뷰 저장': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'multipart/form-data',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+        {
+          label: 'Request Body',
+          content: {
+            review: {
+              score: 'number',
+              themeReview: 'enum(LIKE, NORMAL, DISLIKE)',
+              levelReview: 'enum(LIKE, NORMAL, DISLIKE)',
+              storyReview: 'enum(LIKE, NORMAL, DISLIKE)',
+              isSuccess: 'boolean',
+              numberOfPlayer: 'number',
+              hint: 'number',
+              content: 'string',
+              representativeImageCount: 'number',
+              date: 'date',
+            },
+            images: 'multipart[]',
+          },
+        },
+      ],
       '/review/like/{reviewId}\n리뷰 좋아요': [
         {
           label: 'Headers',
