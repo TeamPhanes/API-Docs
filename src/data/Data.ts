@@ -564,7 +564,6 @@ export const DataType: DataTypeDTO = {
               numberOfPlayer: 'number',
               hint: 'number',
               content: 'string',
-              representativeImageCount: 'number',
               date: 'date',
             },
             images: 'multipart[]',
