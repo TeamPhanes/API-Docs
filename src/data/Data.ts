@@ -854,6 +854,15 @@ export const DataType: DataTypeDTO = {
       ],
     },
     DELETE: {
+      '/gathering/{gatheringId}\n모임 삭제': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+      ],
       '/gathering/like/{gatheringId}\n모임 좋아요 취소': [
         {
           label: 'Headers',
