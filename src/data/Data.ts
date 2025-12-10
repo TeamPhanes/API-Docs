@@ -829,6 +829,30 @@ export const DataType: DataTypeDTO = {
         },
       ],
     },
+    PUT: {
+      '/gathering/{gatheringId}\n모임 수정': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+        {
+          label: 'Request Body',
+          content: {
+            name: 'string',
+            capacity: 'number',
+            date: 'date',
+            registrationStart: 'date',
+            registrationEnd: 'date',
+            content: 'string',
+            isIndividual: 'boolean',
+            price: 'number',
+          },
+        },
+      ],
+    },
     DELETE: {
       '/gathering/like/{gatheringId}\n모임 좋아요 취소': [
         {
