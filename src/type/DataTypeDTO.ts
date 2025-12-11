@@ -1,4 +1,4 @@
-export type HTTPMethod = 'GET' | 'POST' | 'PATCH' | 'DELETE';
+export type HTTPMethod = 'GET' | 'POST' | 'PATCH' | 'PUT' | 'DELETE';
 
 export interface EndpointDetail {
   label: string;
