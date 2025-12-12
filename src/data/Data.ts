@@ -176,7 +176,12 @@ export const DataType: DataTypeDTO = {
                 numberOfPlayer: 'number',
                 isSuccess: 'boolean',
                 content: 'string',
-                reviewImages: 'string[]',
+                reviewImages: [
+                  {
+                    id: 'number',
+                    image: 'string',
+                  },
+                ],
               },
             ],
           },
@@ -527,7 +532,12 @@ export const DataType: DataTypeDTO = {
                 profileImage: 'string',
                 score: 'score',
                 content: 'string',
-                images: 'string[]',
+                images: [
+                  {
+                    id: 'number',
+                    image: 'string',
+                  },
+                ],
                 isSuccess: 'boolean',
                 hint: 'number',
                 numberOfPlayer: 'number',
@@ -576,6 +586,35 @@ export const DataType: DataTypeDTO = {
           content: {
             ContentType: 'application/json',
             Authorization: 'Bearer {accessToken}',
+          },
+        },
+      ],
+    },
+    PUT: {
+      '/review/{reviewId}\n리뷰 수정': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+        {
+          label: 'Request Body',
+          content: {
+            review: {
+              score: 'number',
+              themeReview: 'enum(LIKE, NORMAL, DISLIKE)',
+              levelReview: 'enum(LIKE, NORMAL, DISLIKE)',
+              storyReview: 'enum(LIKE, NORMAL, DISLIKE)',
+              isSuccess: 'boolean',
+              numberOfPlayer: 'number',
+              hint: 'number',
+              content: 'string',
+              representativeId: 'string',
+              date: 'date',
+            },
+            images: 'multipart{}',
           },
         },
       ],
