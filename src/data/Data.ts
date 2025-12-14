@@ -510,6 +510,53 @@ export const DataType: DataTypeDTO = {
           },
         },
       ],
+      '/theme/search\n방탈출 검색': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+        {
+          label: 'Parameters',
+          content: {
+            size: 'number',
+            keyword: 'string',
+            locations: 'string[]',
+            genres: 'string[]',
+            cursor: 'encoded string',
+          },
+        },
+        {
+          label: 'Responses',
+          content: {
+            cursor: {
+              id: 'string',
+              score: 'number',
+            },
+            contents: [
+              {
+                id: 'number',
+                title: 'string',
+                playtime: 'number',
+                level: 'string',
+                image: 'string',
+                minPlayer: 'number',
+                maxPlayer: 'number',
+                cafeName: 'string',
+                spotName: 'string',
+                address: 'string',
+                genres: 'string[]',
+                reviewCount: 'number',
+                avgScore: 'number',
+                isLiked: 'boolean',
+                isVisited: 'boolean',
+              },
+            ],
+          },
+        },
+      ],
     },
     POST: {
       '/theme/like/{themeId}\n방탈출 좋아요': [
