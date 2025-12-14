@@ -484,7 +484,7 @@ export const DataType: DataTypeDTO = {
           },
         },
       ],
-      'theme/search\n방탈출 검색': [
+      'theme/suggest\n방탈출 이름 검색': [
         {
           label: 'Parameters',
           content: {
