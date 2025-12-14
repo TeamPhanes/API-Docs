@@ -961,6 +961,50 @@ export const DataType: DataTypeDTO = {
           },
         },
       ],
+      '/gathering/search\n모임 검색': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+        {
+          label: 'Parameters',
+          content: {
+            size: 'number',
+            keyword: 'string',
+            locations: 'string[]',
+            genres: 'string[]',
+            cursor: 'encoded string',
+          },
+        },
+        {
+          label: 'Responses',
+          content: {
+            cursor: {
+              id: 'string',
+              score: 'number',
+            },
+            contents: [
+              {
+                id: 'number',
+                name: 'string',
+                image: 'string',
+                date: 'date',
+                participantCount: 'number',
+                capacity: 'number',
+                title: 'string',
+                address: 'string',
+                genres: 'string[]',
+                playtime: 'number',
+                level: 'string',
+                isLiked: 'boolean',
+              },
+            ],
+          },
+        },
+      ],
     },
     POST: {
       '/gathering\n모임 생성': [
