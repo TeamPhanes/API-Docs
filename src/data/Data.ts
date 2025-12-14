@@ -237,6 +237,54 @@ export const DataType: DataTypeDTO = {
       ],
     },
   },
+  Notice: {
+    GET: {
+      '/notice\n공지사항 목록 조회': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+          },
+        },
+        {
+          label: 'Responses',
+          content: {
+            id: 'number',
+            title: 'string',
+            createdAt: 'string',
+          },
+        },
+      ],
+    },
+    POST: {
+      '/notice/image\n본문 이미지 임시 저장': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'multipart/form-data',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+        {
+          label: 'Request Body',
+          content: {
+            image: 'multipart',
+          },
+        },
+      ],
+    },
+    DELETE: {
+      '/notice\n공지사항 삭제': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+      ],
+    },
+  },
   Cafe: {
     GET: {
       '/cafe\n카페 목록 조회': [
