@@ -235,6 +235,39 @@ export const DataType: DataTypeDTO = {
           },
         },
       ],
+      '/user/me/schedule\n내 스케줄 조회': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+        {
+          label: 'Parameters',
+          content: {
+            view: 'monthly | weekly',
+            date: 'date',
+          },
+        },
+        {
+          label: 'Responses',
+          content: {
+            id: 'number',
+            name: 'string',
+            participantCount: 'number',
+            capacity: 'number',
+            date: 'date',
+            title: 'string',
+            image: 'string',
+            playtime: 'number',
+            level: 'string',
+            address: 'string',
+            genres: 'string[]',
+            isLiked: 'boolean',
+          },
+        },
+      ],
     },
   },
   Notice: {
