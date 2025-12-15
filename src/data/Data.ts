@@ -180,6 +180,7 @@ export const DataType: DataTypeDTO = {
                   {
                     id: 'number',
                     image: 'string',
+                    isRepresentative: 'boolean',
                   },
                 ],
               },
