@@ -281,11 +281,13 @@ export const DataType: DataTypeDTO = {
         },
         {
           label: 'Responses',
-          content: {
-            id: 'number',
-            title: 'string',
-            createdAt: 'string',
-          },
+          content: [
+            {
+              id: 'number',
+              title: 'string',
+              createdAt: 'string',
+            },
+          ],
         },
       ],
     },
@@ -704,7 +706,7 @@ export const DataType: DataTypeDTO = {
               content: 'string',
               date: 'date',
             },
-            images: 'multipart[]',
+            images: 'multipart{}',
           },
         },
       ],
