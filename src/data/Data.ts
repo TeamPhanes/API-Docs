@@ -176,7 +176,12 @@ export const DataType: DataTypeDTO = {
                 numberOfPlayer: 'number',
                 isSuccess: 'boolean',
                 content: 'string',
-                reviewImages: 'string[]',
+                reviewImages: [
+                  {
+                    id: 'number',
+                    image: 'string',
+                  },
+                ],
               },
             ],
           },
@@ -227,6 +232,89 @@ export const DataType: DataTypeDTO = {
                 isLiked: 'boolean',
               },
             ],
+          },
+        },
+      ],
+      '/user/me/schedule\n내 스케줄 조회': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+        {
+          label: 'Parameters',
+          content: {
+            view: 'monthly | weekly',
+            date: 'date',
+          },
+        },
+        {
+          label: 'Responses',
+          content: {
+            id: 'number',
+            name: 'string',
+            participantCount: 'number',
+            capacity: 'number',
+            date: 'date',
+            title: 'string',
+            image: 'string',
+            playtime: 'number',
+            level: 'string',
+            address: 'string',
+            genres: 'string[]',
+            isLiked: 'boolean',
+          },
+        },
+      ],
+    },
+  },
+  Notice: {
+    GET: {
+      '/notice\n공지사항 목록 조회': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+          },
+        },
+        {
+          label: 'Responses',
+          content: [
+            {
+              id: 'number',
+              title: 'string',
+              createdAt: 'string',
+            },
+          ],
+        },
+      ],
+    },
+    POST: {
+      '/notice/image\n본문 이미지 임시 저장': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'multipart/form-data',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+        {
+          label: 'Request Body',
+          content: {
+            image: 'multipart',
+          },
+        },
+      ],
+    },
+    DELETE: {
+      '/notice\n공지사항 삭제': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
           },
         },
       ],
@@ -398,7 +486,7 @@ export const DataType: DataTypeDTO = {
           },
         },
       ],
-      'theme/search\n방탈출 검색': [
+      'theme/suggest\n방탈출 이름 검색': [
         {
           label: 'Parameters',
           content: {
@@ -419,6 +507,53 @@ export const DataType: DataTypeDTO = {
                 id: 'number',
                 title: 'string',
                 spotName: 'string',
+              },
+            ],
+          },
+        },
+      ],
+      '/theme/search\n방탈출 검색': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+        {
+          label: 'Parameters',
+          content: {
+            size: 'number',
+            keyword: 'string',
+            locations: 'string[]',
+            genres: 'string[]',
+            cursor: 'encoded string',
+          },
+        },
+        {
+          label: 'Responses',
+          content: {
+            cursor: {
+              id: 'string',
+              score: 'number',
+            },
+            contents: [
+              {
+                id: 'number',
+                title: 'string',
+                playtime: 'number',
+                level: 'string',
+                image: 'string',
+                minPlayer: 'number',
+                maxPlayer: 'number',
+                cafeName: 'string',
+                spotName: 'string',
+                address: 'string',
+                genres: 'string[]',
+                reviewCount: 'number',
+                avgScore: 'number',
+                isLiked: 'boolean',
+                isVisited: 'boolean',
               },
             ],
           },
@@ -527,7 +662,12 @@ export const DataType: DataTypeDTO = {
                 profileImage: 'string',
                 score: 'score',
                 content: 'string',
-                images: 'string[]',
+                images: [
+                  {
+                    id: 'number',
+                    image: 'string',
+                  },
+                ],
                 isSuccess: 'boolean',
                 hint: 'number',
                 numberOfPlayer: 'number',
@@ -566,7 +706,7 @@ export const DataType: DataTypeDTO = {
               content: 'string',
               date: 'date',
             },
-            images: 'multipart[]',
+            images: 'multipart{}',
           },
         },
       ],
@@ -576,6 +716,36 @@ export const DataType: DataTypeDTO = {
           content: {
             ContentType: 'application/json',
             Authorization: 'Bearer {accessToken}',
+          },
+        },
+      ],
+    },
+    PUT: {
+      '/review/{reviewId}\n리뷰 수정': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+        {
+          label: 'Request Body',
+          content: {
+            review: {
+              score: 'number',
+              themeReview: 'enum(LIKE, NORMAL, DISLIKE)',
+              levelReview: 'enum(LIKE, NORMAL, DISLIKE)',
+              storyReview: 'enum(LIKE, NORMAL, DISLIKE)',
+              isSuccess: 'boolean',
+              numberOfPlayer: 'number',
+              hint: 'number',
+              content: 'string',
+              representativeId: 'string',
+              deleteImageIds: 'number[]',
+              date: 'date',
+            },
+            images: 'multipart{}',
           },
         },
       ],
@@ -789,6 +959,50 @@ export const DataType: DataTypeDTO = {
                     email: 'string',
                   },
                 ],
+              },
+            ],
+          },
+        },
+      ],
+      '/gathering/search\n모임 검색': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
+          },
+        },
+        {
+          label: 'Parameters',
+          content: {
+            size: 'number',
+            keyword: 'string',
+            locations: 'string[]',
+            genres: 'string[]',
+            cursor: 'encoded string',
+          },
+        },
+        {
+          label: 'Responses',
+          content: {
+            cursor: {
+              id: 'string',
+              score: 'number',
+            },
+            contents: [
+              {
+                id: 'number',
+                name: 'string',
+                image: 'string',
+                date: 'date',
+                participantCount: 'number',
+                capacity: 'number',
+                title: 'string',
+                address: 'string',
+                genres: 'string[]',
+                playtime: 'number',
+                level: 'string',
+                isLiked: 'boolean',
               },
             ],
           },
