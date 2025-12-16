@@ -743,6 +743,7 @@ export const DataType: DataTypeDTO = {
               hint: 'number',
               content: 'string',
               representativeId: 'string',
+              deleteImageIds: 'number[]',
               date: 'date',
             },
             images: 'multipart{}',
