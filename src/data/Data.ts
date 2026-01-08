@@ -274,17 +274,23 @@ export const DataType: DataTypeDTO = {
     GET: {
       '/notice\n공지사항 목록 조회': [
         {
-          label: 'Headers',
-          content: {
-            ContentType: 'application/json',
-          },
-        },
-        {
           label: 'Responses',
           content: [
             {
               id: 'number',
               title: 'string',
+              createdAt: 'string',
+            },
+          ],
+        },
+      ],
+      '/notice/{id}\n공지사항 조회': [
+        {
+          label: 'Responses',
+          content: [
+            {
+              title: 'string',
+              content: 'string',
               createdAt: 'string',
             },
           ],
@@ -304,6 +310,15 @@ export const DataType: DataTypeDTO = {
           label: 'Request Body',
           content: {
             image: 'multipart',
+          },
+        },
+      ],
+      '/notice\n공지사항 저장': [
+        {
+          label: 'Headers',
+          content: {
+            ContentType: 'application/json',
+            Authorization: 'Bearer {accessToken}',
           },
         },
       ],
